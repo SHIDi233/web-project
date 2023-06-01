@@ -22,9 +22,7 @@ function regist() {
 							var result="";
 							jQuery.ajax({
 								"type":"get",
-
-								"url":"https://www.bilibili.com",
-//								"token": window.sessionStorage.getItem("CCNtoken"),
+								"url":"../",
 								headers: {
         							token:  window.sessionStorage.getItem("CCNtoken")
     							},
@@ -34,8 +32,6 @@ function regist() {
 									}
 
 								}
-	
-
 							});
 							if(result.length>0){
 								window.open(result,"_blank");
