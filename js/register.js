@@ -55,7 +55,7 @@ function commit() {
                 }
             }
             // 3. 开启通道
-            xhr.open("POST", "/login", true)
+            xhr.open("POST", "/register", true)
  			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
 			xhr.send("mail="+m+"&name="+n+"&password="+p)
             // 4. 发送请求
