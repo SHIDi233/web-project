@@ -23,13 +23,17 @@ html::before {
 
 }
 
+.body {
+	height:100%;
+}
+
 .box {
     display: flex;
-	justify-content: center; /* 水平居中 */
-  	align-items: center; /* 垂直居中 */
+	/*justify-content: center; /* 水平居中 */
+  	/*align-items: center; /* 垂直居中 */
     overflow: hidden;
     width: 90rem;
-    height: 55rem;
+    height: 45rem;
     background-color: rgba(255,255,255,60%);
     border-radius: 1.5rem;
     margin: 10% auto;
@@ -124,5 +128,3 @@ html::before {
 .right .fn a:hover {
     color: rgb(144,129,241);
 }
-
-/* https://space.bilibili.com/108279272 */

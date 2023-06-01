@@ -1,5 +1,8 @@
 // JavaScript Document	
- 		function getValue() {
+		function regist() {
+			window.location.href="../register";
+		}
+		function getValue() {
 			var a = jQuery("#account").val();
 			var p = jQuery("#pwd").val();
 			// 发送AJAX POST请求
