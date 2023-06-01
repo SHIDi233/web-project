@@ -4,7 +4,8 @@
 	<head>
     <title>登录</title>
 	<link rel="stylesheet" href="register.css">
-
+	<script src = "https://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+	<script src = "register.js"></script>
 </head>
 <meta charset="utf-8">
 <title>注册</title>
@@ -15,11 +16,10 @@
         <div class="box">
             <p class="table">Git CCN</p>
             <br>
-            <input id="account" type="text" placeholder="账号" value="">
+            <input id="mail" type="text" placeholder="邮箱" value="">
+			<input id="name" type="text" placeholder="昵称" value="">
             <input id="pwd" type="password" placeholder="密码" value="">
-			<input id="pwd" type="password" placeholder="昵称" value="">
-            
-			<a href="#" class="go" onclick="getValue()">提交</a>
+			<a href="#" class="go" onclick="commit()">提交</a>
 			<br>
         </div>
     </div>
