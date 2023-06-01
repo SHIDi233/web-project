@@ -27,14 +27,12 @@ function regist() {
         							token:  window.sessionStorage.getItem("CCNtoken")
     							},
 								"success":function(rel){
-									var newPage = window.open("about:blank", "_blank");
-            						//将后台传过来的html页面写到新打开的浏览器窗口中显示
-            						newPage.document.write(rel.data);
+//									var newPage = window.open("about:blank", "_blank");
+//            						//将后台传过来的html页面写到新打开的浏览器窗口中显示
+//            						newPage.document.write(rel.data);
+									$("html").html($(rel).find("html").html());
 								}
 							});
-							if(result.length>0){
-								window.open(result,"_blank");
-							}
 						}
 						else{
 							alert("false");
