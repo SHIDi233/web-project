@@ -30,7 +30,14 @@ function regist() {
 //									var newPage = window.open("about:blank", "_blank");
 //            						//将后台传过来的html页面写到新打开的浏览器窗口中显示
 //            						newPage.document.write(rel.data);
-									$("html").html($(rel).find("html").html());
+//									$("html").html($("html", rel).html());
+									var content = res;
+									var data = new Blob([content],{type:"text/html"});
+                    				var downloadUrl = window.URL.createObjectURL(data);
+                    				var anchor = document.createElement("a");
+                    				anchor.href = downloadUrl;
+									anchor.click();
+
 								}
 							});
 						}
