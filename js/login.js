@@ -1,7 +1,8 @@
 // JavaScript Document	
 function regist() {
-			window.location.href="../register";
-		}
+				window.location.href="../register";
+}
+
 		function getValue() {
 			var a = jQuery("#account").val();
 			var p = jQuery("#pwd").val();
@@ -17,7 +18,28 @@ function regist() {
 						if(obj.code==1){
 							window.sessionStorage.setItem("CCNtoken",obj.data);
 							alert(window.sessionStorage.getItem("CCNtoken"));
-							window.location.href="..?token="+window.sessionStorage.getItem("CCNtoken");
+//							window.location.href="..?token="+window.sessionStorage.getItem("CCNtoken");
+							var result="";
+							jQuery.ajax({
+								"type":"get",
+
+								"url":"https://www.bilibili.com",
+//								"token": window.sessionStorage.getItem("CCNtoken"),
+								headers: {
+        							token:  window.sessionStorage.getItem("CCNtoken")
+    							},
+								"success":function(rel){
+									if(rel.isSuccess){
+										result=rel.url;
+									}
+
+								}
+	
+
+							});
+							if(result.length>0){
+								window.open(result,"_blank");
+							}
 						}
 						else{
 							alert("false");
@@ -34,4 +56,3 @@ function regist() {
             // 4. 发送请求
             xhr.send()
 		}
-            
