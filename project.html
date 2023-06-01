@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
-<script src='project.css'></script>
+<script src='css/project.css'></script>
 <meta charset="utf-8">
-<link rel="stylesheet" href="./project.css">
+<link rel="stylesheet" href="css/project.css">
 <title>项目</title>
 </head>
 
@@ -31,13 +31,6 @@
             <img src="./images/logo1.png" alt="">
         </div>
     </header>
-	
-	<div class='project-header'>
-		<a href="#" class="Home" onclick="leave()">Home</a>
-		<a href="#" class="Msg" onclick="Msg()">Msg</a>
-		<a href="#" class="Code" onclick="Code()">Code</a>
-		<a href="#" class="Setting" onclick="Settings()">Settings</a>
-	</div>
 	<div class='project-data'>
 <!--
 		<div class='left'>
@@ -69,13 +62,23 @@
 			</div>
 		</aside>
 		<main>
+			<div class='project-header'>
+				<div class='header_list'>
+					<div href="#" class="Home" onclick="leave()" style="color: #00aeec; font-weight: 600;">Home</div>
+					<div href="#" class="Msg" onclick="Msg()" style="color: #00aeec; font-weight: 600;">Msg</div>
+					<div href="#" class="Code" onclick="Code()" style="color: #00aeec; font-weight: 600;">Code</div>
+					<div href="#" class="Setting" onclick="Settings()" style="color: #00aeec; font-weight: 600;">Settings</div>
+				</div>
+			</div>
 		</main>
+<!--
 		<aside class='right'>
 			<div class='meeting'>
-		      <p> <img src="header/avator.jpg" width="140" height="140" onClick="meet()" alt="">&nbsp;</p>
+		      <p> <img src="header/avator.jpg" width="70" height="70" onClick="meet()" alt="">&nbsp;</p>
 		      <p> <a href="#" class="go" onClick="meet()">当前进行的会议</a> </p>
-            </aside>
-		</div>
+			</div>
+        </aside>
+-->
 		</p>
 	</div>
 </body>
