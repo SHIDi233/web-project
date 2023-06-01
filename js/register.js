@@ -44,7 +44,7 @@ function commit() {
 //							window.sessionStorage.setItem("CCNtoken",obj.data);
 //							alert(window.sessionStorage.getItem("CCNtoken"));
 							alert("注册成功");
-//							window.location.href="../login;
+							window.location.href="../login";
 						}
 						else{
 							alert("注册失败：邮箱已被注册");
