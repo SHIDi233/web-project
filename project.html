@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<script src='project.css'></script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./project.css">
+<title>项目</title>
+</head>
+
+<body>
+	<header>
+<!--        <video src="./video/banner2.webm" muted autoplay loop></video>-->
+		<img src="header/img/img_morning.jpg" width="1650" height="155" alt=""/>
+        <nav>
+           
+            <div class="search">
+                <input type="text" value="请输入您的搜索内容">
+            </div>
+            <div class="download">
+                <a href="#">下载客户端</a>
+            </div>
+            <div class="login">
+<!--                <a href="#">登录</a>-->
+				<img src="./header/avator.jpg"></img>
+            </div>
+            <div class="upload">
+                <a href="#">退出登录</a>
+            </div>
+        </nav>
+        <div class="logo">
+            <img src="./images/logo1.png" alt="">
+        </div>
+    </header>
+	
+	<div class='project-header'>
+		<a href="#" class="Home" onclick="leave()">Home</a>
+		<a href="#" class="Msg" onclick="Msg()">Msg</a>
+		<a href="#" class="Code" onclick="Code()">Code</a>
+		<a href="#" class="Setting" onclick="Settings()">Settings</a>
+	</div>
+	<div class='project-data'>
+<!--
+		<div class='left'>
+		</div>
+-->
+		<p>
+		<aside class='left' height=1000>
+			<div class='living'>
+				<div class='living_table_name'>
+					当前进行的会议
+				</div>
+			</div>
+			<div class='living_table_body'>
+				<div class='item_left'>
+				  <div class='face'>
+					<div class='bimg'>
+					  <div class='img-inner'>
+								<img src='header/avator.jpg' width='48px' height='48px'></img>
+							</div>
+						</div>
+					</div>
+					<div class='showing'>进行中
+					</div>
+				</div>
+				<div class='item_right'>
+					<div class='living_name'>央视新闻直播间1</div>
+					<div class='living_des'>首艘国产大型邮轮出坞准备进行时 看万吨邮轮如何起浮</div>
+				</div>
+			</div>
+		</aside>
+		<main>
+		</main>
+		<aside class='right'>
+			<div class='meeting'>
+		      <p> <img src="header/avator.jpg" width="140" height="140" onClick="meet()" alt="">&nbsp;</p>
+		      <p> <a href="#" class="go" onClick="meet()">当前进行的会议</a> </p>
+            </aside>
+		</div>
+		</p>
+	</div>
+</body>
+</html>
