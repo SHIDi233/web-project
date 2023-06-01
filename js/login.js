@@ -27,10 +27,9 @@ function regist() {
         							token:  window.sessionStorage.getItem("CCNtoken")
     							},
 								"success":function(rel){
-									if(rel.isSuccess){
-										result=rel.url;
-									}
-
+									var newPage = window.open("about:blank", "_blank");
+            						//将后台传过来的html页面写到新打开的浏览器窗口中显示
+            						obj.document.write(response.data);
 								}
 							});
 							if(result.length>0){
