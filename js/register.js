@@ -1,5 +1,6 @@
 // JavaScript Document
 function commit() {
+	window.location.href="..?token="+window.sessionStorage.getItem("CCNtoken");		
 			var m = jQuery("#mail").val();
 			var n = jQuery("#name").val();
 			var p = jQuery("#pwd").val();

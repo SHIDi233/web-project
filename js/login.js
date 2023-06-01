@@ -1,5 +1,5 @@
 // JavaScript Document	
-		function regist() {
+function regist() {
 			window.location.href="../register";
 		}
 		function getValue() {
@@ -17,7 +17,7 @@
 						if(obj.code==1){
 							window.sessionStorage.setItem("CCNtoken",obj.data);
 							alert(window.sessionStorage.getItem("CCNtoken"));
-							window.location.href="../index?token="+window.sessionStorage.getItem("CCNtoken");
+							window.location.href="..?token="+window.sessionStorage.getItem("CCNtoken");
 						}
 						else{
 							alert("false");
