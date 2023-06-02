@@ -55,7 +55,7 @@
                     if (this.status == 200) {
 						var res = xhr.responseText;
 						var obj = JSON.parse(res);
-						if(obj.code==1){
+						if(!res=="FALSE"){
 //							window.sessionStorage.setItem("CCNtoken",obj.data);
 							alert("验证token成功");
 							
