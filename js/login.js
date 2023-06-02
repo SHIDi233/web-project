@@ -22,7 +22,7 @@ function regist() {
 							var result="";
 							jQuery.ajax({
 								"type":"get",
-								"url":"../index",
+								"url":"../",
 								headers: {
         							token:  window.sessionStorage.getItem("CCNtoken")
     							},
