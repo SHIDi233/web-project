@@ -26,12 +26,13 @@
             </div>
         </nav>
         <div class="logo">
-            <img src="./images/logo1.png" alt="">
+<!--            <img src="./images/logo1.png" alt="">-->
         </div>
     </header>
 	<div class="board">
     	<div class="board_div">
-        	<a href="#" target="_blank"><img src="../imgs/lun1.webp" /></a>
+<!--        	<a href="#" target="_blank"><img src="../imgs/lun1.webp" /></a>-->
+<!--
 				<a href="#" target="_blank"><img src="../imgs/lun2.webp" /></a>
 				<a href="#" target="_blank"><img src="../imgs/lun3.webp" /></a>			
 				<a href="#" target="_blank"><img src="../imgs/lun4.webp" /></a>			
@@ -40,7 +41,38 @@
 				<a href="#" target="_blank"><img src="../imgs/lun7.webp" /></a>			
 				<a href="#" target="_blank"><img src="../imgs/lun8.webp" /></a>			
 				<a href="#" target="_blank"><img src="../imgs/lun9.webp" /></a>						                
+-->
         </div>                         
 	</div>
 </body>
+<script type="text/javascript">
+    window.onload=function(){
+		alert("666");
+        var xhr = new XMLHttpRequest();
+            // 2. 注册回调函数
+        xhr.onreadystatechange = function (){
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+						var res = xhr.responseText;
+						var obj = JSON.parse(res);
+						if(obj.code==1){
+//							window.sessionStorage.setItem("CCNtoken",obj.data);
+							alert("验证token成功");
+							
+						}
+						else{
+							window.location.href="../login";
+						}
+                    }else{
+                        window.location.href="../login";
+                    }
+				}
+		}
+			xhr.open("GET", "../", true)
+ 			xhr.setRequestHeader("token", window.sessionStorage.getItem("CCNtoken"))
+			xhr.send("test")
+            // 4. 发送请求
+            xhr.send();
+    };
+</script>
 </html>

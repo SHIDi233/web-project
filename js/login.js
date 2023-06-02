@@ -18,28 +18,28 @@ function regist() {
 						if(obj.code==1){
 							window.sessionStorage.setItem("CCNtoken",obj.data);
 							alert(window.sessionStorage.getItem("CCNtoken"));
-//							window.location.href="..?token="+window.sessionStorage.getItem("CCNtoken");
-							var result="";
-							jQuery.ajax({
-								"type":"get",
-								"url":"../index",
-								headers: {
-        							token:  window.sessionStorage.getItem("CCNtoken")
-    							},
-								"success":function(rel){
-//									var newPage = window.open("about:blank", "_blank");
-//            						//将后台传过来的html页面写到新打开的浏览器窗口中显示
-//            						newPage.document.write(rel.data);
-//									$("html").html($("html", rel).html());
-									var content = rel.responseText;
-									var data = new Blob([content],{type:"text/html"});
-                    				var downloadUrl = window.URL.createObjectURL(data);
-                    				var anchor = document.createElement("a");
-                    				anchor.href = downloadUrl;
-									anchor.click();
-
-								}
-							});
+							window.location.href="../";
+//							var result="";
+//							jQuery.ajax({
+//								"type":"get",
+//								"url":"../index",
+//								headers: {
+//        							token:  window.sessionStorage.getItem("CCNtoken")
+//    							},
+//								"success":function(rel){
+////									var newPage = window.open("about:blank", "_blank");
+////            						//将后台传过来的html页面写到新打开的浏览器窗口中显示
+////            						newPage.document.write(rel.data);
+////									$("html").html($("html", rel).html());
+//									var content = rel.responseText;
+//									var data = new Blob([content],{type:"text/html"});
+//                    				var downloadUrl = window.URL.createObjectURL(data);
+//                    				var anchor = document.createElement("a");
+//                    				anchor.href = downloadUrl;
+//									anchor.click();
+//
+//								}
+//							});
 						}
 						else{
 							alert("false");
