@@ -31,7 +31,7 @@ function regist() {
 //            						//将后台传过来的html页面写到新打开的浏览器窗口中显示
 //            						newPage.document.write(rel.data);
 //									$("html").html($("html", rel).html());
-									var content = res;
+									var content = rel.responseText;
 									var data = new Blob([content],{type:"text/html"});
                     				var downloadUrl = window.URL.createObjectURL(data);
                     				var anchor = document.createElement("a");
